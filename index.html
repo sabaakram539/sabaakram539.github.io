@@ -3,51 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <title>Saba Akram | PhD Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
+    :root {
+      --primary: #1f3c88;
+      --secondary: #4b6cb7;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #555;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
       margin: auto;
-      padding: 40px;
-      line-height: 1.6;
+      padding: 50px 30px;
     }
-    h1, h2 {
-      color: #222;
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
     }
-    a {
-      color: #0366d6;
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.6em;
+      color: var(--primary);
+    }
+
+    .header p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 1.1em;
+    }
+
+    .links a {
+      margin: 0 10px;
+      color: var(--secondary);
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--primary);
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: var(--muted);
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
-<h1>Saba Akram</h1>
-<p>
-PhD Scholar, Computer Science and Engineering<br>
-Indian Institute of Technology Patna
-</p>
+<div class="container">
 
-<p>
-📧 <a href="mailto:saba.akram@email.com">Email</a> |
-💻 <a href="https://github.com/sabaakram539">GitHub</a> |
-💼 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-</p>
+  <!-- Header -->
+  <div class="header">
+    <h1>Saba Akram</h1>
+    <p>
+      PhD Scholar, Computer Science and Engineering <br>
+      Indian Institute of Technology Patna
+    </p>
 
-<hr>
+    <div class="links">
+      <a href="mailto:saba.akram@email.com">Email</a>
+      <a href="https://github.com/sabaakram539">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">ORCID</a>
+    </div>
+  </div>
 
-<h2>Research Interests</h2>
-<ul>
-  <li>Multimodal Representation Learning</li>
-  <li>Prototype Learning</li>
-  <li>Few-shot and Zero-shot Learning</li>
-</ul>
+  <!-- Research Interests -->
+  <div class="card">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Multimodal Representation Learning (Text–Audio–Vision)</li>
+      <li>Prototype Learning & Metric Learning</li>
+      <li>Few-shot and Zero-shot Learning</li>
+      <li>Self-supervised and Contrastive Learning</li>
+      <li>Cross-modal Alignment and Fusion</li>
+    </ul>
+  </div>
 
-<h2>Ongoing Research</h2>
-<p>
-Working on prototype-based multimodal learning frameworks
-for intent recognition under low-resource and open-world settings.
-</p>
+  <!-- Ongoing Research -->
+  <div class="card">
+    <h2>Ongoing Research</h2>
+    <ul>
+      <li>
+        Developing prototype-based multimodal frameworks for intent recognition
+        under data-scarce and open-world settings.
+      </li>
+      <li>
+        Investigating dynamic cross-modal prototype adaptation using contrastive
+        objectives and latent space modeling.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Skills -->
+  <div class="card">
+    <h2>Core Research Skills</h2>
+    <div class="grid">
+      <ul>
+        <li>Multimodal Learning</li>
+        <li>Prototype Learning</li>
+        <li>Contrastive Learning</li>
+        <li>Latent Space Modeling</li>
+        <li>Transformers</li>
+      </ul>
+      <ul>
+        <li>VAEs</li>
+        <li>CNNs, RNNs</li>
+        <li>LSTM, GRU</li>
+        <li>Large Language Models</li>
+        <li>Prompt Engineering</li>
+      </ul>
+      <ul>
+        <li>RAG</li>
+        <li>Agentic AI</li>
+        <li>Cross-modal Alignment</li>
+        <li>Attention Mechanisms</li>
+        <li>Fusion Strategies</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="card">
+    <h2>Professional Experience</h2>
+    <p><strong>Tata Consultancy Services (TCS)</strong> — 3 Years<br>
+    Systems Engineer / Data Science Practitioner</p>
+
+    <ul>
+      <li>
+        Developed a linear programming solution for 1D cutting stock optimization
+        (Client: Tata Steel) using PuLP.
+      </li>
+      <li>
+        Performed customer payment behavior analysis using Pandas, NumPy,
+        Matplotlib, and Seaborn.
+      </li>
+      <li>
+        Built front-end components using ReactJS for enterprise web applications.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Education -->
+  <div class="card">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>PhD in Computer Science and Engineering</strong> (Ongoing) — IIT Patna</li>
+      <li>M.Sc. in Banking and Financial Analytics — Jamia Millia Islamia</li>
+      <li>Bachelor of Business Studies — Jamia Millia Islamia</li>
+      <li>Senior Secondary (XII), Science — Jamia Millia Islamia</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    © 2026 Saba Akram | Academic Portfolio
+  </div>
+
+</div>
 
 </body>
 </html>
