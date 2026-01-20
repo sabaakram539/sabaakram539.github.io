@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saba Akram - PhD Scholar & Researcher</title>
+    <title>Saba Akram - PhD Research Scholar</title>
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -41,10 +41,10 @@
             title: "PhD in Computer Science and Engineering",
             institute: "Indian Institute of Technology Patna",
             contactInfo: {
-                email: "mailto:YOUR_EMAIL@gmail.com",
-                github: "https://github.com/YOUR_USERNAME",
-                linkedin: "https://linkedin.com/in/YOUR_PROFILE",
-                orcid: "https://orcid.org/YOUR_ORCID_ID",
+                email: "sabaakram539@gmail.com",
+                github: "https://github.com/sabaakram539",
+                linkedin: "https://www.linkedin.com/in/sabaakram539/",
+                orcid: "https://orcid.org/my-orcid?orcid=0009-0002-5732-3292",
                 phone: "tel:+919717246339"
             },
             skills: [
@@ -113,8 +113,6 @@
                         <SocialLink href={profileData.contactInfo.github} icon="fa-github" />
                         <SocialLink href={profileData.contactInfo.linkedin} icon="fa-linkedin" />
                         <SocialLink href={profileData.contactInfo.orcid} icon="fa-id-card" />
-                        {/* Remove phone line below if you want privacy */}
-                        <SocialLink href={profileData.contactInfo.phone} icon="fa-phone-alt" />
                     </div>
                 </div>
             </header>
@@ -175,19 +173,19 @@
             </section>
         );
 
-        const ResearchSection = () => (
-            <section className="mb-12">
-                <SectionTitle icon="fa-book-open" title="Research & Potential Publications" />
-                <div className="grid gap-6 md:grid-cols-2">
-                    {profileData.research.map((paper, idx) => (
-                        <Card key={idx} className="h-full">
-                            <h3 className="font-bold text-lg text-slate-800 mb-3">{paper.title}</h3>
-                            <p className="text-slate-600 text-sm leading-relaxed">{paper.desc}</p>
-                        </Card>
-                    ))}
-                </div>
-            </section>
-        );
+        // const ResearchSection = () => (
+        //     <section className="mb-12">
+        //         <SectionTitle icon="fa-book-open" title="Research & Potential Publications" />
+        //         <div className="grid gap-6 md:grid-cols-2">
+        //             {profileData.research.map((paper, idx) => (
+        //                 <Card key={idx} className="h-full">
+        //                     <h3 className="font-bold text-lg text-slate-800 mb-3">{paper.title}</h3>
+        //                     <p className="text-slate-600 text-sm leading-relaxed">{paper.desc}</p>
+        //                 </Card>
+        //             ))}
+        //         </div>
+        //     </section>
+        // );
 
         const EducationSection = () => (
             <section className="mb-12">
