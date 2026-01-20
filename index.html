@@ -3,248 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saba Akram - PhD Research Scholar</title>
+    <title>Saba Akram - PhD Scholar & Researcher</title>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b', // Slate 800
+                        secondary: '#3b82f6', // Blue 500
+                        accent: '#f8fafc', // Slate 50
+                    }
+                }
+            }
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-
-        /* Header / Hero Section */
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .contact-info {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .contact-info a:hover {
-            transform: translateY(-3px);
-            opacity: 0.8;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Sections */
-        section {
-            background: var(--card-bg);
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .subtitle {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        /* Skills Tags */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tag {
-            background-color: #eef2f5;
-            color: var(--primary-color);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Experience & Education Lists */
-        .timeline-item {
-            margin-bottom: 2rem;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1.5rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        ul.bullets {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        ul.bullets li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            .container { padding: 1rem; }
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-gray-50 text-slate-800">
 
-    <header>
-        <h1>Saba Akram</h1>
-        <p>PhD Scholar in Computer Science and Engineering</p>
-        <p>Indian Institute of Technology (IIT) Patna</p>
-        
-        <div class="contact-info">
-            <a href="mailto:sabaakram539@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/sabaakram539" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sabaakram539/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://orcid.org/my-orcid?orcid=0009-0002-5732-3292" title="ORCID" target="_blank"><i class="fas fa-id-card"></i></a>
-        </div>
-    </header>
+    <div id="root"></div>
 
-    <div class="container">
+    <script type="text/babel">
+        const { useState, useEffect } = React;
 
-        <section id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            
-            <div class="timeline-item">
-                <h3>PhD in Computer Science and Engineering</h3>
-                <div class="subtitle">Indian Institute of Technology Patna | Ongoing</div>
+        // --- DATA SECTION: Update your links here ---
+        const profileData = {
+            name: "Saba Akram",
+            title: "PhD in Computer Science and Engineering",
+            institute: "Indian Institute of Technology Patna",
+            contactInfo: {
+                email: "mailto:YOUR_EMAIL@gmail.com",
+                github: "https://github.com/YOUR_USERNAME",
+                linkedin: "https://linkedin.com/in/YOUR_PROFILE",
+                orcid: "https://orcid.org/YOUR_ORCID_ID",
+                phone: "tel:+919717246339"
+            },
+            skills: [
+                "Natural Language Processing (NLP)", "Machine Learning", "Deep Learning (CNNs, LSTMs, GRU)",
+                "Multimodal (Text-Audio-Vision)", "Generative Adversarial Networks (GANs)", "Large Language Models (LLMs)",
+                "Transformers (BERT, DeBERTa)", "Vision Transformers (DinoV2)", "Audio Models (Wav2vec2, WavLM)",
+                "Agentic AI", "Retrieval Augmented Generation (RAG)", "Prototype Learning", "Contrastive Learning",
+                "Reinforcement Learning", "Python", "R", "SQL", "Tableau"
+            ],
+            experience: [
+                {
+                    role: "Systems Engineer / Data Science Practitioner",
+                    company: "Tata Consultancy Services Ltd. (TCS)",
+                    duration: "3 Years",
+                    projects: [
+                        {
+                            title: "1D Cutting Stock Optimization (Client: Tata Steel Pvt. Ltd.)",
+                            desc: "Developed a linear programming model for one-dimensional cutting stock problems using PuLP. Defined constraints and objective functions, achieving improved material utilization and production yield."
+                        },
+                        {
+                            title: "Weekday Customer Payment Analysis",
+                            desc: "Analyzed customer payment behavior across weekdays. Performed EDA using Pandas/NumPy to identify patterns and visualized trends using Matplotlib/Seaborn."
+                        },
+                        {
+                            title: "Web Application Development (Client: AECB)",
+                            desc: "Developed front-end components using React.JS and collaborated with cross-functional teams for production deployment."
+                        }
+                    ]
+                }
+            ],
+            research: [
+                {
+                    title: "Prototype-Based Multimodal Intent Learning under Data Scarcity",
+                    desc: "Developing a multimodal learning framework integrating text, audio, and visual representations using prototype-based classification and contrastive objectives for robust few-shot and zero-shot intent recognition."
+                },
+                {
+                    title: "Dynamic Cross-Modal Prototype Adaptation for Open-World Multimodal Systems",
+                    desc: "Investigating adaptive prototype mechanisms for open-world settings, focusing on continual intent discovery and cross-modal representation alignment from streaming data."
+                }
+            ],
+            education: [
+                {
+                    degree: "PhD in Computer Science and Engineering",
+                    school: "Indian Institute of Technology Patna",
+                    status: "Ongoing"
+                },
+                {
+                    degree: "M.Sc. in Banking and Financial Analytics",
+                    school: "Jamia Millia Islamia, New Delhi",
+                    status: "Completed"
+                }
+            ]
+        };
+
+        // --- COMPONENTS ---
+
+        const Header = () => (
+            <header className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 shadow-lg">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">{profileData.name}</h1>
+                    <p className="text-xl md:text-2xl font-light text-blue-200 mb-2">{profileData.title}</p>
+                    <p className="text-lg opacity-90">{profileData.institute}</p>
+                    
+                    <div className="flex justify-center gap-6 mt-8">
+                        <SocialLink href={profileData.contactInfo.email} icon="fa-envelope" />
+                        <SocialLink href={profileData.contactInfo.github} icon="fa-github" />
+                        <SocialLink href={profileData.contactInfo.linkedin} icon="fa-linkedin" />
+                        <SocialLink href={profileData.contactInfo.orcid} icon="fa-id-card" />
+                        {/* Remove phone line below if you want privacy */}
+                        <SocialLink href={profileData.contactInfo.phone} icon="fa-phone-alt" />
+                    </div>
+                </div>
+            </header>
+        );
+
+        const SocialLink = ({ href, icon }) => (
+            <a href={href} target="_blank" rel="noreferrer" 
+               className="text-2xl text-white hover:text-blue-400 transition-transform transform hover:-translate-y-1">
+                <i className={`fas ${icon}`}></i>
+            </a>
+        );
+
+        const SectionTitle = ({ icon, title }) => (
+            <h2 className="text-2xl font-bold text-slate-800 border-b-2 border-blue-500 pb-2 mb-6 flex items-center gap-3">
+                <i className={`fas ${icon} text-blue-600`}></i> {title}
+            </h2>
+        );
+
+        const Card = ({ children, className = "" }) => (
+            <div className={`bg-white p-6 rounded-lg shadow-sm border border-slate-100 mb-6 hover:shadow-md transition-shadow ${className}`}>
+                {children}
             </div>
+        );
 
-            <div class="timeline-item">
-                <h3>M.Sc. in Banking and Financial Analytics</h3>
-                <div class="subtitle">Jamia Millia Islamia, New Delhi</div>
-            </div>
-        </section>
+        const SkillsSection = () => (
+            <section className="mb-12">
+                <SectionTitle icon="fa-code" title="Core Skills" />
+                <div className="flex flex-wrap gap-3">
+                    {profileData.skills.map((skill, idx) => (
+                        <span key={idx} className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium border border-slate-200 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-default">
+                            {skill}
+                        </span>
+                    ))}
+                </div>
+            </section>
+        );
 
-        <section id="skills">
-            <h2><i class="fas fa-code"></i> Core Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Natural Language Processing (NLP)</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Deep Learning (CNNs, LSTMs, GRU)</span>
-                <span class="skill-tag">Multimodal (Text-Audio-Vision)</span>
-                <span class="skill-tag">Generative Adversarial Networks (GANs)</span>
-                <span class="skill-tag">Large Language Models (LLMs)</span>
-                <span class="skill-tag">Transformers (BERT, DeBERTa)</span>
-                <span class="skill-tag">Vision Transformers (DinoV2)</span>
-                <span class="skill-tag">Audio Models (Wav2vec2, WavLM)</span>
-                <span class="skill-tag">Agentic AI</span>
-                <span class="skill-tag">Retrieval Augmented Generation (RAG)</span>
-                <span class="skill-tag">Prototype Learning</span>
-                <span class="skill-tag">Contrastive Learning</span>
-                <span class="skill-tag">Reinforcement Learning</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">R</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Tableau</span>
-            </div>
-        </section>
+        const ExperienceSection = () => (
+            <section className="mb-12">
+                <SectionTitle icon="fa-briefcase" title="Professional Experience" />
+                {profileData.experience.map((exp, idx) => (
+                    <Card key={idx}>
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <h3 className="text-xl font-bold text-slate-800">{exp.role}</h3>
+                            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded mt-1 md:mt-0">{exp.duration}</span>
+                        </div>
+                        <p className="text-slate-600 font-medium mb-4">{exp.company}</p>
+                        <div className="space-y-4">
+                            {exp.projects.map((proj, pIdx) => (
+                                <div key={pIdx} className="border-l-4 border-blue-200 pl-4">
+                                    <h4 className="font-semibold text-slate-800">{proj.title}</h4>
+                                    <p className="text-slate-600 text-sm mt-1">{proj.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </Card>
+                ))}
+            </section>
+        );
 
-        <section id="research">
-            <h2><i class="fas fa-book-open"></i> Research & Potential Publications</h2>
-            
-            <div class="timeline-item">
-                <h3>Prototype-Based Multimodal Intent Learning under Data Scarcity</h3>
-                <p>Developing a multimodal learning framework that integrates text, audio, and visual representations using prototype-based classification and contrastive objectives to enable robust few-shot and zero-shot intent recognition.</p>
-            </div>
+        const ResearchSection = () => (
+            <section className="mb-12">
+                <SectionTitle icon="fa-book-open" title="Research & Potential Publications" />
+                <div className="grid gap-6 md:grid-cols-2">
+                    {profileData.research.map((paper, idx) => (
+                        <Card key={idx} className="h-full">
+                            <h3 className="font-bold text-lg text-slate-800 mb-3">{paper.title}</h3>
+                            <p className="text-slate-600 text-sm leading-relaxed">{paper.desc}</p>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+        );
 
-            <div class="timeline-item">
-                <h3>Dynamic Cross-Modal Prototype Adaptation for Open-World Multimodal Systems</h3>
-                <p>Investigating adaptive prototype mechanisms for open-world multimodal settings, focusing on continual intent discovery and cross-modal representation alignment from streaming multimodal data.</p>
-            </div>
-        </section>
+        const EducationSection = () => (
+            <section className="mb-12">
+                <SectionTitle icon="fa-graduation-cap" title="Education" />
+                <div className="grid gap-6 md:grid-cols-2">
+                    {profileData.education.map((edu, idx) => (
+                        <Card key={idx}>
+                            <h3 className="font-bold text-lg text-slate-800">{edu.degree}</h3>
+                            <p className="text-slate-600">{edu.school}</p>
+                            <p className="text-sm text-blue-500 mt-2 font-medium">{edu.status}</p>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+        );
 
-        <section id="experience">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            
-            <div class="timeline-item">
-                <h3>Systems Engineer / Data Science Practitioner</h3>
-                <div class="subtitle">Tata Consultancy Services Ltd. (TCS) | 3 Years</div>
-                
-                <strong>Projects:</strong>
-                <ul class="bullets">
-                    <li>
-                        <strong>1D Cutting Stock Optimization (Client: Tata Steel Pvt. Ltd.):</strong> 
-                        Developed a linear programming model for the one-dimensional cutting stock problem. Implemented the solution using PuLP, defining constraints and objective functions, achieving improved material utilization and production yield.
-                    </li>
-                    <li>
-                        <strong>Weekday Customer Payment Analysis:</strong> 
-                        Analyzed individual customer payment behavior across weekdays. Performed EDA using Pandas and NumPy to identify behavioral patterns and visualized trends using Matplotlib and Seaborn.
-                    </li>
-                    <li>
-                        <strong>Web Application Development (Client: AECB):</strong> 
-                        Developed front-end components using React.JS and collaborated with cross-functional teams for production deployment.
-                    </li>
-                </ul>
-            </div>
-        </section>
+        const Footer = () => (
+            <footer className="text-center py-8 text-slate-400 text-sm border-t border-slate-200 mt-12">
+                <p>© {new Date().getFullYear()} Saba Akram. All rights reserved.</p>
+            </footer>
+        );
 
-    </div>
+        // --- MAIN APP COMPONENT ---
+        const App = () => {
+            return (
+                <div className="min-h-screen">
+                    <Header />
+                    <main className="max-w-4xl mx-auto px-4 py-12">
+                        <EducationSection />
+                        <SkillsSection />
+                        <ResearchSection />
+                        <ExperienceSection />
+                    </main>
+                    <Footer />
+                </div>
+            );
+        };
 
-    <footer style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem;">
-        <p>&copy; 2026 Saba Akram. All rights reserved.</p>
-    </footer>
-
+        // Render the App
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
 </body>
 </html>
