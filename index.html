@@ -101,24 +101,58 @@
 
         // --- COMPONENTS ---
 
-        const Header = () => (
-            <header className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 shadow-lg">
-                <div className="max-w-4xl mx-auto text-center">
-                    <img src="profile.jpeg" alt="Saba Akram" className="w-40 h-40 mx-auto rounded-full border-4 border-blue-400 shadow-lg mb-6 object-cover"/>
+        // const Header = () => (
+        //     <header className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 shadow-lg">
+        //         <div className="max-w-4xl mx-auto text-center">
+        //             <img src="profile.jpeg" alt="Saba Akram" className="w-40 h-40 mx-auto rounded-full border-4 border-blue-400 shadow-lg mb-6 object-cover"/>
 
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">{profileData.name}</h1>
-                    <p className="text-xl md:text-2xl font-light text-blue-200 mb-2">{profileData.title}</p>
-                    <p className="text-lg opacity-90">{profileData.institute}</p>
+        //             <h1 className="text-4xl md:text-5xl font-bold mb-4">{profileData.name}</h1>
+        //             <p className="text-xl md:text-2xl font-light text-blue-200 mb-2">{profileData.title}</p>
+        //             <p className="text-lg opacity-90">{profileData.institute}</p>
                     
-                    <div className="flex justify-center gap-6 mt-8">
-                        <SocialLink href={profileData.contactInfo.email} icon="fa-solid fa-envelope" />
-                        <SocialLink href={profileData.contactInfo.github} icon="fa-brands fa-github" />
-                        <SocialLink href={profileData.contactInfo.linkedin} icon="fa-brands fa-linkedin" />
-                        <SocialLink href={profileData.contactInfo.orcid} icon="fa-brands fa-orcid" />
-                    </div>
-                </div>
-            </header>
-        );
+        //             <div className="flex justify-center gap-6 mt-8">
+        //                 <SocialLink href={profileData.contactInfo.email} icon="fa-solid fa-envelope" />
+        //                 <SocialLink href={profileData.contactInfo.github} icon="fa-brands fa-github" />
+        //                 <SocialLink href={profileData.contactInfo.linkedin} icon="fa-brands fa-linkedin" />
+        //                 <SocialLink href={profileData.contactInfo.orcid} icon="fa-brands fa-orcid" />
+        //             </div>
+        //         </div>
+        //     </header>
+        // );
+        const Header = () => (
+  <header className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 shadow-lg">
+    <div className="max-w-5xl mx-auto">
+
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+
+        {/* Profile Photo (Left) */}
+        <img src="profile.jpg" alt="Saba Akram" className="w-40 h-40 md:w-44 md:h-44 rounded-full border-4 border-blue-400 shadow-lg object-cover flex-shrink-0"/>
+
+        {/* Text Content (Right) */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+            {profileData.name}
+          </h1>
+
+          <p className="text-xl md:text-2xl font-light text-blue-200 mb-2">{profileData.title}</p>
+
+          <p className="text-lg opacity-90 mb-6">{profileData.institute}</p>
+
+          {/* Social Icons */}
+          <div className="flex justify-center md:justify-start gap-6">
+            <SocialLink href="profileData.contactInfo.email" icon="fa-solid fa-envelope" />
+            <SocialLink href={profileData.contactInfo.github} icon="fa-brands fa-github" />
+            <SocialLink href={profileData.contactInfo.linkedin} icon="fa-brands fa-linkedin" />
+            <SocialLink href={profileData.contactInfo.orcid} icon="fa-brands fa-orcid" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </header>
+);
+
 
         // const SocialLink = ({ href, icon }) => (
         //     <a href={href} target="_blank" rel="noreferrer" 
