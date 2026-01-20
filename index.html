@@ -172,19 +172,7 @@
             </section>
         );
 
-        const ResearchSection = () => (
-            <section className="mb-12">
-                <SectionTitle icon="fa-book-open" title="Research & Potential Publications" />
-                <div className="grid gap-6 md:grid-cols-2">
-                    {profileData.research.map((paper, idx) => (
-                        <Card key={idx} className="h-full">
-                            <h3 className="font-bold text-lg text-slate-800 mb-3">{paper.title}</h3>
-                            <p className="text-slate-600 text-sm leading-relaxed">{paper.desc}</p>
-                        </Card>
-                    ))}
-                </div>
-            </section>
-        );
+        
 
         const EducationSection = () => (
             <section className="mb-12">
