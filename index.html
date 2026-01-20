@@ -1,215 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Saba Akram | PhD Researcher</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saba Akram - PhD Scholar & Researcher</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
 
-  <style>
-    :root {
-      --primary: #1f3c88;
-      --secondary: #4b6cb7;
-      --bg: #f7f9fc;
-      --card: #ffffff;
-      --text: #222;
-      --muted: #555;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 30px;
-    }
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
 
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-    .header h1 {
-      margin: 0;
-      font-size: 2.6em;
-      color: var(--primary);
-    }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-    .header p {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 1.1em;
-    }
+        .contact-info {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-    .links a {
-      margin: 0 10px;
-      color: var(--secondary);
-      text-decoration: none;
-      font-weight: 500;
-    }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
 
-    .links a:hover {
-      text-decoration: underline;
-    }
+        .contact-info a:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
 
-    /* Cards */
-    .card {
-      background: var(--card);
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-    .card h2 {
-      margin-top: 0;
-      color: var(--primary);
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-    }
+        /* Sections */
+        section {
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
 
-    li {
-      margin-bottom: 6px;
-    }
+        h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+        .subtitle {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
 
-    .footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: var(--muted);
-      margin-top: 40px;
-    }
-  </style>
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background-color: #eef2f5;
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Experience & Education Lists */
+        .timeline-item {
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        ul.bullets {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        ul.bullets li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <header>
+        <h1>Saba Akram</h1>
+        <p>PhD Scholar in Computer Science and Engineering</p>
+        <p>Indian Institute of Technology (IIT) Patna</p>
+        
+        <div class="contact-info">
+            <a href="mailto:YOUR_EMAIL@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/YOUR_USERNAME" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/YOUR_PROFILE" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://orcid.org/YOUR_ORCID_ID" title="ORCID" target="_blank"><i class="fas fa-id-card"></i></a>
+            <a href="tel:+919717246339" title="+91 9717246339" style="font-size: 1rem; display: flex; align-items: center;"><i class="fas fa-phone-alt" style="margin-right: 5px;"></i> +91 9717246339</a>
+        </div>
+    </header>
 
-  <!-- Header -->
-  <div class="header">
-    <h1>Saba Akram</h1>
-    <p>
-      PhD Scholar, Computer Science and Engineering <br>
-      Indian Institute of Technology Patna
-    </p>
+    <div class="container">
 
-    <div class="links">
-      <a href="mailto:saba.akram@email.com">Email</a>
-      <a href="https://github.com/sabaakram539">GitHub</a>
-      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-      <a href="#">Google Scholar</a>
-      <a href="#">ORCID</a>
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="timeline-item">
+                <h3>PhD in Computer Science and Engineering</h3>
+                <div class="subtitle">Indian Institute of Technology Patna | Ongoing</div>
+            </div>
+
+            <div class="timeline-item">
+                <h3>M.Sc. in Banking and Financial Analytics</h3>
+                <div class="subtitle">Jamia Millia Islamia, New Delhi</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-code"></i> Core Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Natural Language Processing (NLP)</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning (CNNs, LSTMs, GRU)</span>
+                <span class="skill-tag">Multimodal (Text-Audio-Vision)</span>
+                <span class="skill-tag">Generative Adversarial Networks (GANs)</span>
+                <span class="skill-tag">Large Language Models (LLMs)</span>
+                <span class="skill-tag">Transformers (BERT, DeBERTa)</span>
+                <span class="skill-tag">Vision Transformers (DinoV2)</span>
+                <span class="skill-tag">Audio Models (Wav2vec2, WavLM)</span>
+                <span class="skill-tag">Agentic AI</span>
+                <span class="skill-tag">Retrieval Augmented Generation (RAG)</span>
+                <span class="skill-tag">Prototype Learning</span>
+                <span class="skill-tag">Contrastive Learning</span>
+                <span class="skill-tag">Reinforcement Learning</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Tableau</span>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2><i class="fas fa-book-open"></i> Research & Potential Publications</h2>
+            
+            <div class="timeline-item">
+                <h3>Prototype-Based Multimodal Intent Learning under Data Scarcity</h3>
+                <p>Developing a multimodal learning framework that integrates text, audio, and visual representations using prototype-based classification and contrastive objectives to enable robust few-shot and zero-shot intent recognition.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Dynamic Cross-Modal Prototype Adaptation for Open-World Multimodal Systems</h3>
+                <p>Investigating adaptive prototype mechanisms for open-world multimodal settings, focusing on continual intent discovery and cross-modal representation alignment from streaming multimodal data.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="timeline-item">
+                <h3>Systems Engineer / Data Science Practitioner</h3>
+                <div class="subtitle">Tata Consultancy Services Ltd. (TCS) | 3 Years</div>
+                
+                <strong>Projects:</strong>
+                <ul class="bullets">
+                    <li>
+                        <strong>1D Cutting Stock Optimization (Client: Tata Steel Pvt. Ltd.):</strong> 
+                        Developed a linear programming model for the one-dimensional cutting stock problem. Implemented the solution using PuLP, defining constraints and objective functions, achieving improved material utilization and production yield.
+                    </li>
+                    <li>
+                        <strong>Weekday Customer Payment Analysis:</strong> 
+                        Analyzed individual customer payment behavior across weekdays. Performed EDA using Pandas and NumPy to identify behavioral patterns and visualized trends using Matplotlib and Seaborn.
+                    </li>
+                    <li>
+                        <strong>Web Application Development (Client: AECB):</strong> 
+                        Developed front-end components using React.JS and collaborated with cross-functional teams for production deployment.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
     </div>
-  </div>
 
-  <!-- Research Interests -->
-  <div class="card">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Multimodal Representation Learning (Text–Audio–Vision)</li>
-      <li>Prototype Learning & Metric Learning</li>
-      <li>Few-shot and Zero-shot Learning</li>
-      <li>Self-supervised and Contrastive Learning</li>
-      <li>Cross-modal Alignment and Fusion</li>
-    </ul>
-  </div>
-
-  <!-- Ongoing Research -->
-  <div class="card">
-    <h2>Ongoing Research</h2>
-    <ul>
-      <li>
-        Developing prototype-based multimodal frameworks for intent recognition
-        under data-scarce and open-world settings.
-      </li>
-      <li>
-        Investigating dynamic cross-modal prototype adaptation using contrastive
-        objectives and latent space modeling.
-      </li>
-    </ul>
-  </div>
-
-  <!-- Skills -->
-  <div class="card">
-    <h2>Core Research Skills</h2>
-    <div class="grid">
-      <ul>
-        <li>Multimodal Learning</li>
-        <li>Prototype Learning</li>
-        <li>Contrastive Learning</li>
-        <li>Latent Space Modeling</li>
-        <li>Transformers</li>
-      </ul>
-      <ul>
-        <li>VAEs</li>
-        <li>CNNs, RNNs</li>
-        <li>LSTM, GRU</li>
-        <li>Large Language Models</li>
-        <li>Prompt Engineering</li>
-      </ul>
-      <ul>
-        <li>RAG</li>
-        <li>Agentic AI</li>
-        <li>Cross-modal Alignment</li>
-        <li>Attention Mechanisms</li>
-        <li>Fusion Strategies</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Experience -->
-  <div class="card">
-    <h2>Professional Experience</h2>
-    <p><strong>Tata Consultancy Services (TCS)</strong> — 3 Years<br>
-    Systems Engineer / Data Science Practitioner</p>
-
-    <ul>
-      <li>
-        Developed a linear programming solution for 1D cutting stock optimization
-        (Client: Tata Steel) using PuLP.
-      </li>
-      <li>
-        Performed customer payment behavior analysis using Pandas, NumPy,
-        Matplotlib, and Seaborn.
-      </li>
-      <li>
-        Built front-end components using ReactJS for enterprise web applications.
-      </li>
-    </ul>
-  </div>
-
-  <!-- Education -->
-  <div class="card">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>PhD in Computer Science and Engineering</strong> (Ongoing) — IIT Patna</li>
-      <li>M.Sc. in Banking and Financial Analytics — Jamia Millia Islamia</li>
-      <li>Bachelor of Business Studies — Jamia Millia Islamia</li>
-      <li>Senior Secondary (XII), Science — Jamia Millia Islamia</li>
-    </ul>
-  </div>
-
-  <div class="footer">
-    © 2026 Saba Akram | Academic Portfolio
-  </div>
-
-</div>
+    <footer style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem;">
+        <p>&copy; 2026 Saba Akram. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
